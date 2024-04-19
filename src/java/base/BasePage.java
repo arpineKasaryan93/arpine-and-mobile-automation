@@ -1,11 +1,20 @@
 package base;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.PageFactory;
 
 
-public class BasePage  {
+public class BasePage {
+
+
+    AppiumDriver driver;
+
+    public BasePage() {
+        driver = DriverManage.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     //GetText
     public String getText(WebElement element) {

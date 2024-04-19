@@ -14,8 +14,9 @@ public class MainScreen extends BasePage {
 
     @AndroidFindBy(accessibility = "App")
     private WebElement appButton;
-    @AndroidFindBy(accessibility = "App")
-    private ArrayList<WebElement> examples;
+
+//    @AndroidFindBy(accessibility = "App")
+//    private ArrayList<WebElement> examples;
 
     // Click Methods
     public MainScreen clickAppButton() {

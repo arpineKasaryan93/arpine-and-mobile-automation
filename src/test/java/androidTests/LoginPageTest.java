@@ -2,7 +2,6 @@ package androidTests;
 
 import org.testng.annotations.Test;
 import screens.LoginScreen;
-import utils.BaseTest;
 
 public class LoginPageTest extends BaseTest {
     @Test
