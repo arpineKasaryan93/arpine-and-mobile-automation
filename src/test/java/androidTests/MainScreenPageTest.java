@@ -1,9 +1,7 @@
 package androidTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import screens.AccessibilityScreen1;
-import screens.CustomViewScreen;
-import screens.MainScreen;
+import screens.*;
 
 public class MainScreenPageTest extends BaseTest {
     @Test
@@ -20,8 +18,16 @@ public class MainScreenPageTest extends BaseTest {
     @Test
     public void toggleSwitchCheck() {
         MainScreen mainScreen = new MainScreen();
-        Assert.assertTrue( mainScreen.isScreenLoaded(), "Screen is not loaded");
+        AccessibilityServiceDetailScreen accessibilityServiceDetailScreen = new AccessibilityServiceDetailScreen();
+        Assert.assertTrue(mainScreen.isScreenLoaded(), "Screen is not loaded");
         mainScreen.clickAccessibility1Button().clickService().clickButton().toggleSwitch();
+    }
+    @Test
+    public void unCheckMark() {
+        MainScreen mainScreen = new MainScreen();
+        AccNodeQueringScreen accNodeQueringScreen = new AccNodeQueringScreen();
+        mainScreen.clickAccessibility1Button().clickNodeQuery().checkTheCheckmark();
+        Assert.assertFalse(accNodeQueringScreen.isTakeOutTrashChecked(),"Check mark is nor removed");
     }
 
 }

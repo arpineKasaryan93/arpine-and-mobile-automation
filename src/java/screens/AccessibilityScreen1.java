@@ -30,6 +30,10 @@ public class AccessibilityScreen1 extends BasePage {
         click(accessibilityService);
         return new AccessibiltyServiceScreen();
 
+    }public AccNodeQueringScreen  clickNodeQuery() {
+        click(accessibilityNodeQuerying);
+        return new AccNodeQueringScreen();
+
     }
 
     public String getActionBarText() {

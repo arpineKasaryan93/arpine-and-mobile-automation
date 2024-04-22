@@ -35,7 +35,8 @@ public class AccessibilityServiceDetailScreen extends BasePage {
     public void toggleSwitch(){
         click(darkThemeToggle);
 
-    } public String getToggleState(){
+    }
+    public String getToggleState(){
         return getText(darkThemeToggleState);
 
     }
