@@ -58,14 +58,14 @@ public class BasePage {
     }
 
     public static void swipeUp() {
-        Dimension screenSize = ScreenUtils.getScreenSize(DriverManage.getDriver());
+        Dimension screenSize = Utils.getScreenSize(DriverManage.getDriver());
         int screenWidth = screenSize.getWidth();
         int screenHeight = screenSize.getHeight();
         swipe(DriverManage.getDriver(), screenWidth / 2, screenHeight / 4, screenWidth / 2, screenHeight * 3 / 4, 1000);
     }
 
     public static void swipeDown() {
-        Dimension screenSize = ScreenUtils.getScreenSize(DriverManage.getDriver());
+        Dimension screenSize = Utils.getScreenSize(DriverManage.getDriver());
         int screenWidth = screenSize.getWidth();
         int screenHeight = screenSize.getHeight();
         swipe(DriverManage.getDriver(), screenWidth / 2, screenHeight * 3 / 4, screenWidth / 2, screenHeight / 4, 1000);
