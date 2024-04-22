@@ -11,7 +11,7 @@ public class AccessibilityScreen1 extends BasePage {
     private WebElement accessibilityNodeProvider;
     @AndroidFindBy(accessibility = "Accessibility Node Querying")
     private WebElement accessibilityNodeQuerying;
-    @AndroidFindBy(accessibility = "AccessibilityService")
+    @AndroidFindBy(accessibility = "Accessibility Service")
     private WebElement accessibilityService;
     @AndroidFindBy(accessibility = "Custom View")
     private WebElement customView;
@@ -22,8 +22,13 @@ public class AccessibilityScreen1 extends BasePage {
 
     //click Methods
 
-    public void clickCustomView() {
+    public CustomViewScreen clickCustomView() {
         click(customView);
+        return new CustomViewScreen();
+
+    } public AccessibiltyServiceScreen  clickService() {
+        click(accessibilityService);
+        return new AccessibiltyServiceScreen();
 
     }
 

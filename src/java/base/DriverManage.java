@@ -7,11 +7,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class DriverManage {
     protected static AppiumDriver driver;
 
-    //
-//    private base.DriverManage() {
-//
-//    }
-//
     public void setDriver(AppiumDriverLocalService service) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -26,7 +21,5 @@ public class DriverManage {
         return driver;
     }
 
-
 }
-//
-//
+
