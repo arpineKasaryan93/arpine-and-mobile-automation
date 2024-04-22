@@ -105,4 +105,9 @@ public class MainScreen extends BasePage {
         writeText(appButton, text);
     }
 
+    public boolean isScreenLoaded() {
+        // Check if all expected elements are present
+        return appButton.isDisplayed() && views.isDisplayed();
+    }
+
 }

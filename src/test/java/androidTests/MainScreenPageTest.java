@@ -20,6 +20,7 @@ public class MainScreenPageTest extends BaseTest {
     @Test
     public void toggleSwitchCheck() {
         MainScreen mainScreen = new MainScreen();
+        Assert.assertTrue( mainScreen.isScreenLoaded(), "Screen is not loaded");
         mainScreen.clickAccessibility1Button().clickService().clickButton().toggleSwitch();
     }
 
